@@ -1,0 +1,25 @@
+<?php
+
+ $a = array( 
+    "one" => 1, 
+    "two" => 2, 
+    "three" => 3, 
+    "seventeen" => 17 
+ ); 
+
+print (my_var_dump($a));
+
+function my_var_dump($array){
+	$c = count($array);
+	$save = "array ($c) { \n";
+	foreach ($array as $key => $value) {
+		$c1 = strlen($value);
+		$t1 = gettype($value);
+		$save=$save."[$key] => $t1($c1) \"$value\"\n";
+	}
+	$save."}";
+  return $save;
+}
+
+
+// your code goes here
